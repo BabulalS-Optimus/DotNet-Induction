@@ -1,0 +1,19 @@
+Comments for Assignment 10.
+
+=============
+Problem 1:
+=============
+1.The code will not run as there is no '_age' attribute defined in 'CollegeStudent' class.
+2.To make it run, we need to inherit 'Student' class in 'CollegeStudent' class.
+
+==================================================
+
+=============
+Problem 2:
+=============
+1. Error in line no. #7 i.e. public univPeople{.
+2. There must be some method which defines the code for creating a new object for 'Student' class.
+3. Line no. #10 will give an error as there is no such property defined in the 'Student' class.
+4. To make it work we need to declare a public property for '_age' in 'Student' class.
+
+====================================================

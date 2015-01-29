@@ -1,0 +1,5 @@
+C:\Babu Lal\DotNet Induction\Assignments\bin\Debug\Assignments.exe.config
+C:\Babu Lal\DotNet Induction\Assignments\bin\Debug\Assignments.exe
+C:\Babu Lal\DotNet Induction\Assignments\bin\Debug\Assignments.pdb
+C:\Babu Lal\DotNet Induction\Assignments\obj\Debug\Assignments.exe
+C:\Babu Lal\DotNet Induction\Assignments\obj\Debug\Assignments.pdb

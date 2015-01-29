@@ -1,0 +1,25 @@
+Output for the assignment 7 : 
+
+===========
+OUTPUT
+===========
+Interest Rate is : 0.04
+Interest Rate is : 0.08
+Interest Rate is : 0.08
+
+
+=========================
+Explanation for output : 
+=========================
+1. Initially the value of currInterestRate is 0.04, so output is 0.04.
+2. After that, using 's2' object the value is changed to 0.08.
+3. And at the end the value remained 0.08 as it was a static attribute.
+=========================================================================
+
+NOTE :- The 'currInterestRate' is defined static. Whenever the value of a static property is 
+changed using any object, it is reflected to other objects also as it is a class attribute.
+
+Class attribute means a single memory is allocated for an attribute for all the objects of the 
+class and it holds the same value for all the objects.
+
+It can also be accessed by simply using class name.
