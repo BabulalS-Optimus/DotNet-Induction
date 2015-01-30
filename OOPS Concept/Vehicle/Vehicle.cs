@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using CustomExceptions;
+using System.Diagnostics;
 
 namespace Vehicle
 {
-    class Vehicle
+    public class Vehicle
     {
         // private attributes for Vehicle class
         #region Attributes
@@ -18,7 +20,9 @@ namespace Vehicle
         private bool isMoving;
         #endregion
 
-        //public properties for private attributes
+        /// <summary>
+        /// public properties for private attributes
+        /// </summary>
         #region PublicProperties
         public string Make
         {
@@ -65,48 +69,89 @@ namespace Vehicle
             }
         }
 
-
         //to accelerate the vehicle
         public void Accelerate(float speed)
         {
-            if (this.Speed + speed <= maxSpeed)
+            try //try block
             {
+
                 this.Speed += speed;
                 if (!this.IsMoving())
                     this.isMoving = true;
-            }
-            else
-            {
-                Console.WriteLine("Cannot exceed the maximum speed of the vehicle. The speed is set to maximum.");
-                this.Speed = maxSpeed;
-            }
-            Console.WriteLine("\nNew Speed of the vehicle : {0}\n", Speed);
 
+                if (this.Speed > MaxSpeed) //checking for any exception
+                {
+                    string message = "Vehicle overheated.";
+                    throw new IsCarDeadException(message, Speed); //throwing the exception
+                }
+
+            }
+            catch (IsCarDeadException ex)
+            {
+                Console.WriteLine("\nWarning : Vehicle is overheating...");
+            }
+            
+            finally //finally block
+            {
+                Console.WriteLine("\nNew Speed of the vehicle : {0}\n", Speed);
+            }
         }
 
         //method to deaccelerate the vehicle
         public void Deaccelerate(float speed)
         {
-            if (this.Speed - speed >= 0)
+            try //try block
             {
-                this.Speed -= speed;
+
+                if (this.Speed - speed >= 0)
+                {
+                    this.Speed -= speed;
+                }
+                else
+                {
+                    Console.WriteLine("The speed cannot be less than zero. The speed is set to 0.");
+                    this.Speed = 0;
+                }
+
+                if (this.Speed > MaxSpeed) //checking for the exception 
+                {
+                    string message = "Vehicle is still overheating.";
+                    throw new IsCarDeadException(message, Speed); //throwing the exception
+                }
             }
-            else
+            catch (IsCarDeadException ex)
             {
-                Console.WriteLine("The speed cannot be less than zero. The speed is set to 0.");
-                this.Speed = 0;
+                Console.WriteLine("\nWarning : Vehicle is overheating...");
             }
-            if (Speed == 0)
+            
+            finally //finally block for try
             {
-                this.isMoving = false;
+                if (Speed == 0)
+                {
+                    this.isMoving = false;
+                }
+                Console.WriteLine("\nNew Speed of the vehicle : {0}\n", Speed);
             }
-            Console.WriteLine("\nNew Speed of the vehicle : {0}\n", Speed);
         }
 
         //method that tells whether the vehicle is moving or not
         public bool IsMoving()
         {
             return isMoving;
+        }
+
+        //printing the exceptions caught
+        public void ShowExceptions()
+        {
+            Console.Write("\n Exceptions caught : \n\n");
+            if (IsCarDeadException.messages.Count == 0)
+            {
+                Console.WriteLine("<<No exceptions found....>>");
+            }
+            foreach (string item in IsCarDeadException.messages)
+            {
+                Console.WriteLine(item);
+            }
         }
 
     }

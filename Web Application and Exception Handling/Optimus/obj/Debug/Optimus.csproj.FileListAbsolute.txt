@@ -1,0 +1,5 @@
+C:\Babu Lal\DotNet-Induction\Web Application and Exception Handling\Optimus\bin\Optimus.dll
+C:\Babu Lal\DotNet-Induction\Web Application and Exception Handling\Optimus\bin\Optimus.pdb
+C:\Babu Lal\DotNet-Induction\Web Application and Exception Handling\Optimus\obj\Debug\Optimus.csprojResolveAssemblyReference.cache
+C:\Babu Lal\DotNet-Induction\Web Application and Exception Handling\Optimus\obj\Debug\Optimus.dll
+C:\Babu Lal\DotNet-Induction\Web Application and Exception Handling\Optimus\obj\Debug\Optimus.pdb

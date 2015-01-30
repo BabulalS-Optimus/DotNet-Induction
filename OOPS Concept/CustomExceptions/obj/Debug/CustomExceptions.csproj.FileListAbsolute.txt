@@ -1,0 +1,5 @@
+C:\Babu Lal\DotNet-Induction\OOPS Concept\CustomExceptions\obj\Debug\CustomExceptions.csprojResolveAssemblyReference.cache
+C:\Babu Lal\DotNet-Induction\OOPS Concept\CustomExceptions\bin\Debug\CustomExceptions.dll
+C:\Babu Lal\DotNet-Induction\OOPS Concept\CustomExceptions\bin\Debug\CustomExceptions.pdb
+C:\Babu Lal\DotNet-Induction\OOPS Concept\CustomExceptions\obj\Debug\CustomExceptions.dll
+C:\Babu Lal\DotNet-Induction\OOPS Concept\CustomExceptions\obj\Debug\CustomExceptions.pdb

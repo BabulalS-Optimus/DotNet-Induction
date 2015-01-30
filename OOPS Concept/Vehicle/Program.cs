@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,7 +17,7 @@ namespace Vehicle
             Console.WriteLine("2. Car");
             Console.WriteLine("3. Bike");
             Console.WriteLine("4. Bicycle");
-            
+
             //read the input from user
             int choice = Convert.ToInt16(Console.ReadLine());
 
@@ -30,6 +31,7 @@ namespace Vehicle
                     truck.ShowDetails();     //show details of the vehicle
                     truck.Deaccelerate(12);  //deaccelerate the vehicle by 12
                     truck.ShowDetails();     //show the details of the vehicle
+                    truck.ShowExceptions();   //showing the exceptions generated
                     break;
 
                 case 2://if user chooses a car
@@ -39,30 +41,34 @@ namespace Vehicle
                     car.ShowDetails();        //show details of the vehicle
                     car.Deaccelerate(12);     //deaccelerate the vehicle by 12
                     car.ShowDetails();        //show the details of the vehicle
+                    car.ShowExceptions();   //showing the exceptions generated
                     break;
 
                 case 3://if user chooses a bike
-                    Bike bike = new Bike("BAJAJ", 2013, "PULSUR", 12, 250, 67, 140);
+                    Bike bike = new Bike("BAJAJ", 2013, "PULSUR", 102, 250, 67, 140);
                     bike.ShowDetails();        //show details 
-                    bike.Accelerate(12);       //acelerate vehicle by 12
+                    bike.Accelerate(88);       //acelerate vehicle by 12
                     bike.ShowDetails();        //show details of the vehicle
-                    bike.Deaccelerate(12);     //deaccelerate the vehicle by 12
+                    bike.Deaccelerate(102);     //deaccelerate the vehicle by 12
                     bike.ShowDetails();        //show the details of the vehicle
+                    bike.ShowExceptions();   //showing the exceptions generated
                     break;
 
                 case 4://if user chooses a bicycle
                     Bicycle bicycle = new Bicycle("ATLAS", 2014, "WER-005", 6, true, 40);
                     bicycle.ShowDetails();      //show details 
-                    bicycle.Accelerate(12);     //acelerate vehicle by 12
+                    bicycle.Accelerate(52);     //acelerate vehicle by 12
                     bicycle.ShowDetails();      //show details of the vehicle
                     bicycle.Deaccelerate(12);   //deaccelerate the vehicle by 12
                     bicycle.ShowDetails();      //show the details of the vehicle
+                    bicycle.ShowExceptions();   //showing the exceptions generated
                     break;
 
                 default:  //if user enters an incorrect option
                     Console.WriteLine("Not a correct option.");
                     break;
             }
+            
         }
     }
 }
