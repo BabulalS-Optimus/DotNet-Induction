@@ -1,0 +1,4 @@
+C:\Babu Lal\DotNet-Induction\ADO.Net\StudentManager\StudentManager.BusinessLayer\bin\Debug\StudentManager.BusinessLayer.dll
+C:\Babu Lal\DotNet-Induction\ADO.Net\StudentManager\StudentManager.BusinessLayer\bin\Debug\StudentManager.BusinessLayer.pdb
+C:\Babu Lal\DotNet-Induction\ADO.Net\StudentManager\StudentManager.BusinessLayer\obj\Debug\StudentManager.BusinessLayer.dll
+C:\Babu Lal\DotNet-Induction\ADO.Net\StudentManager\StudentManager.BusinessLayer\obj\Debug\StudentManager.BusinessLayer.pdb

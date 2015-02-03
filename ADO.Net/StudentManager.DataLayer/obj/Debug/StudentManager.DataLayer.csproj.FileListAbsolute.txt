@@ -1,0 +1,8 @@
+C:\Babu Lal\DotNet-Induction\ADO.Net\StudentManager.DataLayer\bin\Debug\StudentManager.DataLayer.dll
+C:\Babu Lal\DotNet-Induction\ADO.Net\StudentManager.DataLayer\bin\Debug\StudentManager.DataLayer.pdb
+C:\Babu Lal\DotNet-Induction\ADO.Net\StudentManager.DataLayer\bin\Debug\StudentManager.BusinessLayer.dll
+C:\Babu Lal\DotNet-Induction\ADO.Net\StudentManager.DataLayer\bin\Debug\StudentManager.BusinessLayer.pdb
+C:\Babu Lal\DotNet-Induction\ADO.Net\StudentManager.DataLayer\obj\Debug\StudentManager.DataLayer.csprojResolveAssemblyReference.cache
+C:\Babu Lal\DotNet-Induction\ADO.Net\StudentManager.DataLayer\obj\Debug\StudentManager.DataLayer.dll
+C:\Babu Lal\DotNet-Induction\ADO.Net\StudentManager.DataLayer\obj\Debug\StudentManager.DataLayer.pdb
+C:\Babu Lal\DotNet-Induction\ADO.Net\StudentManager.DataLayer\bin\Debug\StudentManager.DataLayer.dll.config
