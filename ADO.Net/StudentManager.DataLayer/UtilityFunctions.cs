@@ -7,6 +7,7 @@ using System.Web;
 using StudentManager.BusinessLayer;
 using System.Diagnostics;
 using System.Web.Caching;
+using System.IO;
 
 namespace StudentManager.DataLayer
 {
@@ -17,38 +18,38 @@ namespace StudentManager.DataLayer
         /// Method to get all the streams from the database
         /// </summary>
         /// <returns>Dictionary object holding the StreamID and StreamName</returns>
-        public  Dictionary<int, string> GetAllStreams()
+        public Dictionary<int, string> GetAllStreams()
         {
             //Dictionary object to hold the results
             Dictionary<int, string> streams = new Dictionary<int, string>();
-            
-                //SqlConnection object to hold the connection properties
-                SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["connectDB"].ToString());
-                try
-                {
-                    conn.Open();   //opening the connection
 
-                    //query to be executed
-                    string query = "select * from stream_master";
-                    SqlCommand comm = new SqlCommand(query, conn);
-                    SqlDataReader reader = comm.ExecuteReader(); //executing the query
+            //SqlConnection object to hold the connection properties
+            SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["connectDB"].ToString());
+            try
+            {
+                conn.Open();   //opening the connection
 
-                    while (reader.Read())
-                    {
-                        //adding the fetched data to the dictionary object
-                        streams.Add(Convert.ToInt32(reader["StreamID"]), reader["StreamName"].ToString());
-                    }
-                    reader.Close();  //closing the reader
-                    conn.Close(); //closing the connection
-                }
-                catch (SqlException ex)
+                //query to be executed
+                string query = "select * from stream_master";
+                SqlCommand comm = new SqlCommand(query, conn);
+                SqlDataReader reader = comm.ExecuteReader(); //executing the query
+
+                while (reader.Read())
                 {
-                    //if any exception occurs while opening the connection
-                    Console.WriteLine("{0} EX : {1} ", Messages.ConnToDBFailed, ex.ToString());
-                    UtilityFunctions.LogToEventLog(ex);
+                    //adding the fetched data to the dictionary object
+                    streams.Add(Convert.ToInt32(reader["StreamID"]), reader["StreamName"].ToString());
                 }
-                
-            
+                reader.Close();  //closing the reader
+                conn.Close(); //closing the connection
+            }
+            catch (SqlException ex)
+            {
+                //if any exception occurs while opening the connection
+                Console.WriteLine("{0} EX : {1} ", Messages.ConnToDBFailed, ex.ToString());
+                UtilityFunctions.LogToEventLog(ex);
+            }
+
+
             return streams; //returing the result
         }
 
@@ -61,32 +62,32 @@ namespace StudentManager.DataLayer
             //Dictionary object to hold the result
             Dictionary<int, string> states = new Dictionary<int, string>();
 
-               //SqlConnection object to hold the properties of the Database connection
-                SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["connectDB"].ToString());
-                try
-                {
-                    conn.Open();  //opening the connection
+            //SqlConnection object to hold the properties of the Database connection
+            SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["connectDB"].ToString());
+            try
+            {
+                conn.Open();  //opening the connection
 
-                    //query to be executed
-                    string query = "select * from state_master";
-                    SqlCommand comm = new SqlCommand(query, conn);
-                    SqlDataReader reader = comm.ExecuteReader();
+                //query to be executed
+                string query = "select * from state_master";
+                SqlCommand comm = new SqlCommand(query, conn);
+                SqlDataReader reader = comm.ExecuteReader();
 
-                    while (reader.Read())
-                    {
-                        //adding the fetched data to Dictionary object
-                        states.Add(Convert.ToInt32(reader["StateID"]), reader["StateName"].ToString());
-                    }
-                    reader.Close();  //closing the reader
-                    conn.Close(); //closing the connection
-                }
-                catch (SqlException ex)
+                while (reader.Read())
                 {
-                    //if any exception found
-                    Console.WriteLine("{0} EX : {1} ", Messages.ConnToDBFailed, ex.ToString());
-                    UtilityFunctions.LogToEventLog(ex);
+                    //adding the fetched data to Dictionary object
+                    states.Add(Convert.ToInt32(reader["StateID"]), reader["StateName"].ToString());
                 }
-           
+                reader.Close();  //closing the reader
+                conn.Close(); //closing the connection
+            }
+            catch (SqlException ex)
+            {
+                //if any exception found
+                Console.WriteLine("{0} EX : {1} ", Messages.ConnToDBFailed, ex.ToString());
+                UtilityFunctions.LogToEventLog(ex);
+            }
+
 
             return states; //returng the result
         }
@@ -178,5 +179,42 @@ namespace StudentManager.DataLayer
             eventLog.WriteEntry(ex.ToString());
 
         }
+
+        /// <summary>
+        /// Method to read the student data from CSV file
+        /// </summary>
+        /// <param name="fileName">Path to the CSV file</param>
+        /// <returns>Result of the process</returns>
+        public static bool LoadFromCSV(string fileName)
+        {
+            bool result = false;
+
+            //list to hold records of student from CSV file
+            List<Student> listStudents = new List<Student>();
+
+            //creating a stream for reading the contents of the file
+            using (var reader = new StreamReader(fileName))
+            {
+                //looping until end of the file is not found
+                while (!reader.EndOfStream)
+                {
+                    //reading the data from CSV file and splitting it
+                    var data = reader.ReadLine().Split(',');
+
+                    //creating a new Student object
+                    Student stud = new Student(data[0], data[1], Convert.ToInt32(data[2]), Convert.ToInt32(data[3]), Convert.ToInt32(data[4]), data[5], Convert.ToInt32(data[6]));
+
+                    //inserting the new object to list
+                    listStudents.Add(stud);
+                }
+            }
+
+            //call to insertStudents() method of Student class to save record to database
+            result = Student.insertStudents(listStudents);
+
+            //retruning the result
+            return result;
+        }
+
     }
 }

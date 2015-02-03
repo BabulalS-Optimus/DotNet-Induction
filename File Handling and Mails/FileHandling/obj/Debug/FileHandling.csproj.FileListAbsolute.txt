@@ -1,0 +1,9 @@
+C:\Babu Lal\DotNet-Induction\File Handling and Mails\FileHandling\bin\FileHandling.dll
+C:\Babu Lal\DotNet-Induction\File Handling and Mails\FileHandling\bin\FileHandling.pdb
+C:\Babu Lal\DotNet-Induction\File Handling and Mails\FileHandling\obj\Debug\FileHandling.csprojResolveAssemblyReference.cache
+C:\Babu Lal\DotNet-Induction\File Handling and Mails\FileHandling\obj\Debug\FileHandling.dll
+C:\Babu Lal\DotNet-Induction\File Handling and Mails\FileHandling\obj\Debug\FileHandling.pdb
+C:\Babu Lal\DotNet-Induction\File Handling and Mails\FileHandling\bin\FileHandling.BusinessLayer.dll
+C:\Babu Lal\DotNet-Induction\File Handling and Mails\FileHandling\bin\FileHandling.DataLayer.dll
+C:\Babu Lal\DotNet-Induction\File Handling and Mails\FileHandling\bin\FileHandling.DataLayer.pdb
+C:\Babu Lal\DotNet-Induction\File Handling and Mails\FileHandling\bin\FileHandling.BusinessLayer.pdb

@@ -61,6 +61,7 @@
     <Content Include="AllStudents.aspx" />
     <Content Include="DeleteStudent.aspx" />
     <Content Include="EditStudent.aspx" />
+    <Content Include="ReadCSVFile.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -93,9 +94,17 @@
       <DependentUpon>EditStudent.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReadCSVFile.aspx.cs">
+      <DependentUpon>ReadCSVFile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReadCSVFile.aspx.designer.cs">
+      <DependentUpon>ReadCSVFile.aspx</DependentUpon>
+    </Compile>
     <Compile Include="StudentDataHandler.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="StudentsRecord.CSV" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

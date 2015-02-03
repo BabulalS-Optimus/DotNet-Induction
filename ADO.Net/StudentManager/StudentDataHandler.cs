@@ -69,5 +69,18 @@ namespace StudentManager
             bool result = Student.DeleteStudent(rollNos);
             return result;
         }
+
+        /// <summary>
+        /// Method to  insert student in databse
+        /// </summary>
+        /// <param name="studentsData">List containing records of student</param>
+        /// <returns>result for the operation</returns>
+        public static bool insertStudents(List<Student> studentsData)
+        {
+            bool result = false;
+            //call to the static method of Student class which stores the records in database
+            result = Student.insertStudents(studentsData);
+            return result;
+        }
     }
 }

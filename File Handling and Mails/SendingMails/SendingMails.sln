@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Express 2012 for Web
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SendingMails", "SendingMails.csproj", "{32D9ECD0-360F-433D-931A-958F82265543}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SendingMails.DataLayer", "..\SendingMails.DataLayer\SendingMails.DataLayer.csproj", "{159F52C8-BA6D-440D-8D95-3D9977214855}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SendingMails.BusinessLayer", "SendingMails.BusinessLayer\SendingMails.BusinessLayer.csproj", "{029B6B2C-72F9-49C1-9981-3190B85708F5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{32D9ECD0-360F-433D-931A-958F82265543}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32D9ECD0-360F-433D-931A-958F82265543}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32D9ECD0-360F-433D-931A-958F82265543}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32D9ECD0-360F-433D-931A-958F82265543}.Release|Any CPU.Build.0 = Release|Any CPU
+		{159F52C8-BA6D-440D-8D95-3D9977214855}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{159F52C8-BA6D-440D-8D95-3D9977214855}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{159F52C8-BA6D-440D-8D95-3D9977214855}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{159F52C8-BA6D-440D-8D95-3D9977214855}.Release|Any CPU.Build.0 = Release|Any CPU
+		{029B6B2C-72F9-49C1-9981-3190B85708F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{029B6B2C-72F9-49C1-9981-3190B85708F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{029B6B2C-72F9-49C1-9981-3190B85708F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{029B6B2C-72F9-49C1-9981-3190B85708F5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

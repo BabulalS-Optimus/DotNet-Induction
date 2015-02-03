@@ -1,0 +1,73 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Cengea.master.cs" Inherits="WebApplication1.Cengea" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <style type="text/css">
+        #divTop {
+            height: 70px;
+        }
+
+        .navigation {
+            width: 1300px;
+            height: 38px;
+            background-color: #acd3fe;
+        }
+
+        .nav-container {
+            list-style: none;
+            padding: 7px;
+            margin-left: 100px;
+        }
+
+        ul li {
+            display: block;
+            position: relative;
+            float: left;
+            border: 1px solid #000;
+        }
+
+            ul li a {
+                padding: 9px;
+                text-decoration: none;
+            }
+
+        .selected {
+            background-color: #6fabff;
+        }
+
+        .unselected {
+            background-color: #acd3fe;
+        }
+    </style>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div id="divTop">
+        </div>
+        <div class="navigation">
+            <ul class="nav-container">
+                <% if (Page.Request.Path.Contains("Default.aspx"))
+                   { %>
+                <li><a href="Default.aspx" class="selected" title="Home">Home</a></li>
+                <li><a href="Reports.aspx" class="unselected" title="Reports">Reports</a></li>
+                <% }
+                   else
+                   { %>
+                <li><a href="Default.aspx" class="unselected" title="Home">Home</a></li>
+                <li><a href="Reports.aspx" class="selected" title="Reports">Reports</a></li>
+                <%}%>
+            </ul>
+
+        </div>
+        <div>
+            <asp:ContentPlaceHolder ID="mainContainer" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>

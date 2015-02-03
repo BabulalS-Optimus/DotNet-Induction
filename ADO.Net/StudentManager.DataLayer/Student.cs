@@ -335,5 +335,55 @@ namespace StudentManager.DataLayer
 
             return result;
         }
+
+        /// <summary>
+        /// Method to  insert student in databse
+        /// </summary>
+        /// <param name="studentsData">List containing records of student</param>
+        /// <returns>result for the operation</returns>
+        public static bool insertStudents(List<Student> studentsData)
+        {
+            bool result = false;
+            //SqlConnection object to hold the properties of the connect
+            SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["connectDB"].ToString());
+            try
+            {
+                //opeining the connection
+                conn.Open();
+
+                //traversing the list
+                foreach (Student stud in studentsData)
+                {
+                    //query to be executed
+                    string query = "insert into student_master values(@fullname,@fathersName,@rollNo,@age,@stream,@address,@state)";
+
+                    //SqlCommand object to handle the query execution
+                    SqlCommand comm = new SqlCommand(query, conn);
+                    comm.Parameters.AddWithValue("fullname", stud.fullName);
+                    comm.Parameters.AddWithValue("fathersName", stud.fathersName);
+                    comm.Parameters.AddWithValue("rollNo", stud.rollNo);
+                    comm.Parameters.AddWithValue("age", stud.age);
+                    comm.Parameters.AddWithValue("stream", stud.stream);
+                    comm.Parameters.AddWithValue("address", stud.address);
+                    comm.Parameters.AddWithValue("state", stud.state);
+                    int count = comm.ExecuteNonQuery(); //executing the query
+
+
+                    if (count > 0) //checking if any record got added or not?
+                        result = true;
+                }
+                conn.Close(); //closing the connection with the database
+
+            }
+            catch (SqlException ex)
+            {
+                //if found any exception
+                Console.WriteLine("{0} EX : {1} ", Messages.ConnToDBFailed, ex.ToString());
+                UtilityFunctions.LogToEventLog(ex);
+            }
+
+            //returning the result
+            return result;
+        }
     }
 }
