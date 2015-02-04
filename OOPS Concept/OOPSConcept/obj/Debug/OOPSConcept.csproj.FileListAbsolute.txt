@@ -1,6 +1,0 @@
-C:\Babu Lal\DotNet Induction\OOPS Concept\OOPSConcept\bin\Debug\OOPSConcept.exe.config
-C:\Babu Lal\DotNet Induction\OOPS Concept\OOPSConcept\bin\Debug\OOPSConcept.exe
-C:\Babu Lal\DotNet Induction\OOPS Concept\OOPSConcept\bin\Debug\OOPSConcept.pdb
-C:\Babu Lal\DotNet Induction\OOPS Concept\OOPSConcept\obj\Debug\OOPSConcept.csprojResolveAssemblyReference.cache
-C:\Babu Lal\DotNet Induction\OOPS Concept\OOPSConcept\obj\Debug\OOPSConcept.exe
-C:\Babu Lal\DotNet Induction\OOPS Concept\OOPSConcept\obj\Debug\OOPSConcept.pdb

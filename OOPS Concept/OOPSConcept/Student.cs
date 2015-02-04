@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace OOPSConcept
 {
@@ -81,14 +77,14 @@ namespace OOPSConcept
         }
         
         //parameteric constructor for creating a new Student object
-        public Student(string name, int age, string course, int[] marks, int roll, string adm_date)
+        public Student(string name, int age, string course, int[] marks, int roll, string admDate)
         {
             this.name = name;
             this.age = age;
             this.course = course;
             this.marks = marks;
             this.roll = roll;
-            this.adm_date = adm_date;
+            this.adm_date = admDate;
             studentCount++;
             this.enrolmentNo = RandomNumberGenerator();
         }

@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Students>
+	<student>
+		<fullname>student 1</fullname>
+		<fathersname>Fathersname 1</fathersname>
+		<rollnumber>12</rollnumber>
+		<age>22</age>
+		<branch>MCA</branch>
+		<address>XYZ Lane</address>
+		<state>Punjab</state>
+		<grade>A</grade>
+	</student>
+	<student>
+		<fullname>student 2</fullname>
+		<fathersname>Fathersname 2</fathersname>
+		<rollnumber>28</rollnumber>
+		<age>25</age>
+		<branch>BTech (CSE)</branch>
+		<address>ABC Street</address>
+		<state>Rajasthan</state>
+		<grade>D</grade>
+	</student>
+	<student>
+		<fullname>student 3</fullname>
+		<fathersname>Fathersname 3</fathersname>
+		<rollnumber>51</rollnumber>
+		<age>23</age>
+		<branch>MTech (ECE)</branch>
+		<address>MNO Village</address>
+		<state>Haryana</state>
+		<grade>D</grade>
+	</student>
+</Students>

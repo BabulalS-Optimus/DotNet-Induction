@@ -1,1 +1,7 @@
 C:\Babu Lal\DotNet Induction\OOPS Concept\Encapsulation\bin\Debug\Encapsulation.exe.config
+C:\Babu Lal\DotNet-Induction\Basic Syntax and Constructs\Encapsulation\bin\Debug\Encapsulation.exe.config
+C:\Babu Lal\DotNet-Induction\Basic Syntax and Constructs\Encapsulation\bin\Debug\Encapsulation.exe
+C:\Babu Lal\DotNet-Induction\Basic Syntax and Constructs\Encapsulation\bin\Debug\Encapsulation.pdb
+C:\Babu Lal\DotNet-Induction\Basic Syntax and Constructs\Encapsulation\obj\Debug\Encapsulation.csprojResolveAssemblyReference.cache
+C:\Babu Lal\DotNet-Induction\Basic Syntax and Constructs\Encapsulation\obj\Debug\Encapsulation.exe
+C:\Babu Lal\DotNet-Induction\Basic Syntax and Constructs\Encapsulation\obj\Debug\Encapsulation.pdb

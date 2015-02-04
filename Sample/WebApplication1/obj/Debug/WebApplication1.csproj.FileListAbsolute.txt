@@ -1,5 +1,0 @@
-C:\Babu Lal\DotNet-Induction\Sample\WebApplication1\bin\WebApplication1.dll
-C:\Babu Lal\DotNet-Induction\Sample\WebApplication1\bin\WebApplication1.pdb
-C:\Babu Lal\DotNet-Induction\Sample\WebApplication1\obj\Debug\WebApplication1.csprojResolveAssemblyReference.cache
-C:\Babu Lal\DotNet-Induction\Sample\WebApplication1\obj\Debug\WebApplication1.dll
-C:\Babu Lal\DotNet-Induction\Sample\WebApplication1\obj\Debug\WebApplication1.pdb

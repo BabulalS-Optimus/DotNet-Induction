@@ -1,0 +1,5 @@
+C:\Babu Lal\DotNet-Induction\XML and Serialization\XMLAssignment\XMLAssignment.BusinessLayer\bin\XMLAssignment.BusinessLayer.dll
+C:\Babu Lal\DotNet-Induction\XML and Serialization\XMLAssignment\XMLAssignment.BusinessLayer\bin\XMLAssignment.BusinessLayer.pdb
+C:\Babu Lal\DotNet-Induction\XML and Serialization\XMLAssignment\XMLAssignment.BusinessLayer\obj\Debug\XMLAssignment.BusinessLayer.csprojResolveAssemblyReference.cache
+C:\Babu Lal\DotNet-Induction\XML and Serialization\XMLAssignment\XMLAssignment.BusinessLayer\obj\Debug\XMLAssignment.BusinessLayer.dll
+C:\Babu Lal\DotNet-Induction\XML and Serialization\XMLAssignment\XMLAssignment.BusinessLayer\obj\Debug\XMLAssignment.BusinessLayer.pdb

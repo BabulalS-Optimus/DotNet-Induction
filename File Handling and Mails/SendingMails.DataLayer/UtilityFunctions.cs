@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Web;
+using SendingMails.BusinessLayer;
 
 namespace SendingMails.DataLayer
 {
@@ -34,7 +35,7 @@ namespace SendingMails.DataLayer
                     if (fileInfo.Length > 100)
                     {
                         //if size is more than 100 bytes
-                        filesDeleted.Add(fileName);
+                        filesDeleted.Add(fileInfo.Name);
                         //deleting the file
                         File.Delete(fileName);
                     }
@@ -42,7 +43,7 @@ namespace SendingMails.DataLayer
                     {
                         //if file size is less than 100 bytes
                         //appending the text to the file
-                        string message = "Size less than 100 bytes.";
+                        string message = Messages.FileSizeLess;
                         File.AppendAllText(fileName, message);
                     }
                 }
@@ -60,8 +61,8 @@ namespace SendingMails.DataLayer
         public static bool SendMail(List<string> files)
         {
             bool result = false;
-
-            
+            //Call SendMail() method of Mailer class which sends mail
+            result = Mailer.SendMail(files);
 
             return result;
 

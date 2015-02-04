@@ -75,18 +75,20 @@ namespace Vehicle
             try //try block
             {
 
-                this.Speed += speed;
-                if (!this.IsMoving())
-                    this.isMoving = true;
+                Speed += speed;
+                if (!IsMoving())
+                {
+                    isMoving = true;
+                }
 
-                if (this.Speed > MaxSpeed) //checking for any exception
+                if (Speed > MaxSpeed) //checking for any exception
                 {
                     string message = "Vehicle overheated.";
                     throw new IsCarDeadException(message, Speed); //throwing the exception
                 }
 
             }
-            catch (IsCarDeadException ex)
+            catch (IsCarDeadException)
             {
                 Console.WriteLine("\nWarning : Vehicle is overheating...");
             }

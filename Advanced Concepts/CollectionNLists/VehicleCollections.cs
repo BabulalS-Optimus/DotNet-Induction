@@ -35,7 +35,7 @@ namespace CollectionNLists
         //namespace => System.Collections
         IEnumerator IEnumerable.GetEnumerator()
         {
-            return this.vehicles.GetEnumerator();
+            return new VehicleEnumerator();
         }
         
         //method to add a new vehicle
@@ -51,4 +51,23 @@ namespace CollectionNLists
         }
 
     }
+
+    class VehicleEnumerator : IEnumerator
+    {
+        public object Current
+        {
+            get { throw new NotImplementedException(); }
+        }
+
+        public bool MoveNext()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Reset()
+        {
+            throw new NotImplementedException();
+        }
+    }
+
 }

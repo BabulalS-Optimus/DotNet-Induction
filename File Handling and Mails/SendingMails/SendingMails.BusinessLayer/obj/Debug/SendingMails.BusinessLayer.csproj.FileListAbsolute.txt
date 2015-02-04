@@ -1,0 +1,5 @@
+C:\Babu Lal\DotNet-Induction\File Handling and Mails\SendingMails\SendingMails.BusinessLayer\bin\SendingMails.BusinessLayer.dll
+C:\Babu Lal\DotNet-Induction\File Handling and Mails\SendingMails\SendingMails.BusinessLayer\bin\SendingMails.BusinessLayer.pdb
+C:\Babu Lal\DotNet-Induction\File Handling and Mails\SendingMails\SendingMails.BusinessLayer\obj\Debug\SendingMails.BusinessLayer.csprojResolveAssemblyReference.cache
+C:\Babu Lal\DotNet-Induction\File Handling and Mails\SendingMails\SendingMails.BusinessLayer\obj\Debug\SendingMails.BusinessLayer.dll
+C:\Babu Lal\DotNet-Induction\File Handling and Mails\SendingMails\SendingMails.BusinessLayer\obj\Debug\SendingMails.BusinessLayer.pdb

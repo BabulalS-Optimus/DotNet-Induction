@@ -38,6 +38,11 @@ namespace SendingMails
                     //if returned null
                     Response.Write(Messages.DirNotFound);
                 }
+                else if (deletedFiles.Count == 0)
+                {
+                    //if no files deleted
+                    Response.Write(Messages.NoFilesDeleted);
+                }
                 else
                 {
                     //if data returned

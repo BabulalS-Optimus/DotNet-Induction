@@ -1,11 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Encapsulation
 {
+    /// <summary>
+    /// 
+    /// </summary>
     class Book
     {
         //attributes of Book class
