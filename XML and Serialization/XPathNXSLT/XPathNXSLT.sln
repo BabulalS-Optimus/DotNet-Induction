@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Express 2012 for Web
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XPathNXSLT", "XPathNXSLT.csproj", "{051DBB28-C0AE-4CFF-ACF1-30B387302B1A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XPathNXSLT.DataLayer", "..\XPathNXSLT.DataLayer\XPathNXSLT.DataLayer.csproj", "{1F8CB0F6-858E-40FE-8958-4C460C74B106}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XPathNXSLT.BusinessLayer", "XPathNXSLT.BusinessLayer\XPathNXSLT.BusinessLayer.csproj", "{919F6913-1B5C-4021-974F-C941BE6CAB6D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{051DBB28-C0AE-4CFF-ACF1-30B387302B1A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{051DBB28-C0AE-4CFF-ACF1-30B387302B1A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{051DBB28-C0AE-4CFF-ACF1-30B387302B1A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{051DBB28-C0AE-4CFF-ACF1-30B387302B1A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1F8CB0F6-858E-40FE-8958-4C460C74B106}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F8CB0F6-858E-40FE-8958-4C460C74B106}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F8CB0F6-858E-40FE-8958-4C460C74B106}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F8CB0F6-858E-40FE-8958-4C460C74B106}.Release|Any CPU.Build.0 = Release|Any CPU
+		{919F6913-1B5C-4021-974F-C941BE6CAB6D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{919F6913-1B5C-4021-974F-C941BE6CAB6D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{919F6913-1B5C-4021-974F-C941BE6CAB6D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{919F6913-1B5C-4021-974F-C941BE6CAB6D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfStudent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Student>
+    <RollNo>51</RollNo>
+    <Name>ABC User</Name>
+    <TotalMarks>78</TotalMarks>
+  </Student>
+  <Student>
+    <RollNo>45</RollNo>
+    <Name>FGH User</Name>
+    <TotalMarks>67</TotalMarks>
+  </Student>
+  <Student>
+    <RollNo>27</RollNo>
+    <Name>XYZ User</Name>
+    <TotalMarks>94</TotalMarks>
+  </Student>
+</ArrayOfStudent>

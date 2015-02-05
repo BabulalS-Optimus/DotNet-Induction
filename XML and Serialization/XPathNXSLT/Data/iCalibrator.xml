@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Students>
+  <Student name="student 1" age="22">
+    <Stream>PCM</Stream>
+    <Address>
+      <City>Delhi</City>
+      <Country>India</Country>
+    </Address>
+  </Student>
+  <Student name="student 2" age="23">
+    <Stream>BTech</Stream>
+    <Address>
+      <City>Jaipur</City>
+      <Country>India</Country>
+    </Address>
+  </Student>
+</Students>

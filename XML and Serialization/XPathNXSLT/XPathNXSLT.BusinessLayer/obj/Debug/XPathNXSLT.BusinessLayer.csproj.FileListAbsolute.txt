@@ -1,0 +1,5 @@
+C:\Babu Lal\DotNet-Induction\XML and Serialization\XPathNXSLT\XPathNXSLT.BusinessLayer\bin\XPathNXSLT.BusinessLayer.dll
+C:\Babu Lal\DotNet-Induction\XML and Serialization\XPathNXSLT\XPathNXSLT.BusinessLayer\bin\XPathNXSLT.BusinessLayer.pdb
+C:\Babu Lal\DotNet-Induction\XML and Serialization\XPathNXSLT\XPathNXSLT.BusinessLayer\obj\Debug\XPathNXSLT.BusinessLayer.csprojResolveAssemblyReference.cache
+C:\Babu Lal\DotNet-Induction\XML and Serialization\XPathNXSLT\XPathNXSLT.BusinessLayer\obj\Debug\XPathNXSLT.BusinessLayer.dll
+C:\Babu Lal\DotNet-Induction\XML and Serialization\XPathNXSLT\XPathNXSLT.BusinessLayer\obj\Debug\XPathNXSLT.BusinessLayer.pdb

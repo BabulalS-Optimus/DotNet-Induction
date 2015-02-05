@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script type="text/javascript" src="Manage.js"></script>
+    <link href="Question Style.css" rel="stylesheet" type="text/css" />
+</head>
+<body onload="init()">
+    <form id="form1">
+        <div class="quesContainer">
+            <h4>Please indicate your level of agreement to each statement</h4>
+            <div class="instruction">
+                The Sky Is Blue
+            </div>
+
+            <div id="divAnswers">
+                <div id="divAns1" class="answer" onclick="divClicked(this.id)">
+                    <input type="checkbox" id="check1"  value="Agree Strongly" onclick="cbClicked()" />Agree
+                    Strongly
+                </div>
+                <div id="divAns2" class="answer" onclick="divClicked(this.id)">
+                    <input type="checkbox" id="check2" value="Agree Somewhat" onclick="cbClicked()" />Agree
+                    Somewhat
+                </div>
+                <div id="divAns3" class="answer" onclick="divClickedOnlyThis(this.id)">
+                    <input type="checkbox" id="check3" value="Disagree Somewhat" onclick="cbClicked()" />Disagree
+                    Somewhat
+                </div>
+                <div id="divAns4" class="answer" onclick="divClicked(this.id)">
+                    <input type="checkbox" id="check4" value="disagree Strongly" onclick="cbClicked()" />Disagree
+                    Strongly
+                </div>
+                <div align="right">
+                    <input type="Submit" class="next" value="Next" />
+                </div>
+            </div>
+        </div>
+    </form>
+</body>
+</html>
