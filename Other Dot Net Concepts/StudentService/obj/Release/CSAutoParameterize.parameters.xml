@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="connectDB-Web.config Connection String" description="connectDB Connection String used in web.config by the application to access the database." defaultValue="Data Source=OPTIMUS-85\SQLEXPRESS;Initial Catalog=DotNetInduction;User ID=sa;Password=optimus@123" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Babu\ Lal\\DotNet-Induction\\Other\ Dot\ Net\ Concepts\\StudentService\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='connectDB']/@connectionString" />
+  </parameter>
+</parameters>

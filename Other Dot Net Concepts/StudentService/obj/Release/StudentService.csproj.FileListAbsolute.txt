@@ -1,0 +1,5 @@
+C:\Babu Lal\DotNet-Induction\Other Dot Net Concepts\StudentService\bin\StudentService.dll
+C:\Babu Lal\DotNet-Induction\Other Dot Net Concepts\StudentService\bin\StudentService.pdb
+C:\Babu Lal\DotNet-Induction\Other Dot Net Concepts\StudentService\obj\Release\StudentService.csprojResolveAssemblyReference.cache
+C:\Babu Lal\DotNet-Induction\Other Dot Net Concepts\StudentService\obj\Release\StudentService.dll
+C:\Babu Lal\DotNet-Induction\Other Dot Net Concepts\StudentService\obj\Release\StudentService.pdb
