@@ -1,6 +1,0 @@
-C:\Babu Lal\DotNet-Induction\Advanced Concepts\CollectionNLists\bin\Debug\CollectionNLists.exe.config
-C:\Babu Lal\DotNet-Induction\Advanced Concepts\CollectionNLists\bin\Debug\CollectionNLists.exe
-C:\Babu Lal\DotNet-Induction\Advanced Concepts\CollectionNLists\bin\Debug\CollectionNLists.pdb
-C:\Babu Lal\DotNet-Induction\Advanced Concepts\CollectionNLists\obj\Debug\CollectionNLists.csprojResolveAssemblyReference.cache
-C:\Babu Lal\DotNet-Induction\Advanced Concepts\CollectionNLists\obj\Debug\CollectionNLists.exe
-C:\Babu Lal\DotNet-Induction\Advanced Concepts\CollectionNLists\obj\Debug\CollectionNLists.pdb

@@ -1,40 +1,39 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Collections;
 
 namespace CollectionsNLists2
 {
-    //VehicleCollection class
+    /// <summary>
+    /// Class to use Vehicle class with ArrayList
+    /// </summary>
     class TestCollection
     {
+        /// <summary>
+        /// Definition of main method
+        /// </summary>
+        /// <param name="args">List of arguments received </param>
         static void Main(string[] args)
         {
-            //list to store vehicles
-            List<Vehicle> vehiclesList = new List<Vehicle>();
+            //Create an array List
+            ArrayList vehiclesList = new ArrayList();// Array.CreateInstance(typeof(Vehicle), 10);
 
-            //defining Vehicle objects
+            #region Define and Add objects to Array List
             Vehicle marutiQwe = new Vehicle("MARUTI SUZUKI", 2013, "QWE-004", 140);
             Vehicle mercedesOpr = new Vehicle("MERCEDES", 2014, "OPR56G", 160);
-
-            //defining Car objects
             Car marutiAbh = new Car("MARUTI SUZUKI", 2011, "ABH_JKL", true, 22, 4, 140);
-
-            //defining a bike object
             Bike bajajPulsar = new Bike("BAJAJ", 2013, "PULSUR", 250, 67, 140);
 
-            //adding all the objects to the vehicle list
             vehiclesList.Add(marutiQwe);
             vehiclesList.Add(mercedesOpr);
             vehiclesList.Add(marutiAbh);
             vehiclesList.Add(bajajPulsar);
+            #endregion
 
             Console.WriteLine("\nDetails using foreach : \n ");
-            //enumerating through the list contents
+
+            //enumerating through the list contents and use ToString() to deisplay
             foreach (Vehicle item in vehiclesList)
             {
-                //printing the result of ToString() method
                 Console.WriteLine(item.ToString());
             }
 
@@ -42,18 +41,13 @@ namespace CollectionsNLists2
             //travesring each item using index
             for (int i = 0; i < vehiclesList.Count; i++)
             {
+                Console.WriteLine(((Vehicle)(vehiclesList[i])).ToString());
 
-                //printing the result of ToString() method
-                Console.WriteLine(vehiclesList[i].ToString());
-
-                //checking for maximum speed of vehicle
-                if (vehiclesList[i].MaxSpeed > 150)
+                //checking for maximum speed of vehicle and modify it
+                if (((Vehicle)(vehiclesList[i])).MaxSpeed > 150)
                 {
-                    //modifying maximum speed of the vehicle to 150
-                    vehiclesList[i].MaxSpeed = 150;
-
-                    //printing the result of ToString() method
-                    Console.WriteLine("<changed> {0}", vehiclesList[i].ToString());
+                    ((Vehicle)(vehiclesList[i])).MaxSpeed = 150;
+                    Console.WriteLine("<changed> {0}", ((Vehicle)(vehiclesList[i])).ToString());
                 }
             }
         }

@@ -1,13 +1,12 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CollectionNLists
 {
-    //VehicleCollection class implementing IEnumerable 
+    /// <summary>
+    /// Vehisle class implementing IEnumerable interface
+    /// </summary>
     class VehicleCollections : IEnumerable
     {
         //collection of vehicle objects
@@ -30,14 +29,14 @@ namespace CollectionNLists
         {
             this.vehicles = new List<Vehicle>(vehicles);
         }
-        
+
         //implementation of the GetEnumerator methods 
         //namespace => System.Collections
         IEnumerator IEnumerable.GetEnumerator()
         {
             return new VehicleEnumerator();
         }
-        
+
         //method to add a new vehicle
         public void Add(Vehicle newVehicle)
         {
@@ -52,21 +51,43 @@ namespace CollectionNLists
 
     }
 
+    /// <summary>
+    /// Class implementing IEnumerable interface
+    /// </summary>
     class VehicleEnumerator : IEnumerator
     {
+        //collection of vehicle objects
+        List<Vehicle> vehicles = new List<Vehicle>();
+        int _current;
+
+        /// <summary>
+        /// Current property
+        /// </summary>
         public object Current
         {
-            get { throw new NotImplementedException(); }
+            get { return vehicles.ElementAt(_current); }
         }
 
+        /// <summary>
+        /// Method to return whether to move forward or not
+        /// </summary>
+        /// <returns>Result for moving</returns>
         public bool MoveNext()
         {
-            throw new NotImplementedException();
+            //Compare the current position with the length of the List
+            if (vehicles.Count == 0 || vehicles.Count <= _current)
+            {
+                return false;
+            }
+            return true;
         }
 
+        /// <summary>
+        /// Method to reset the counter
+        /// </summary>
         public void Reset()
         {
-            throw new NotImplementedException();
+            _current = 0;
         }
     }
 

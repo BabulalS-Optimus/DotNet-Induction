@@ -1,0 +1,185 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DotNetTestModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="DotNetTestModelStoreContainer">
+    <EntitySet Name="Activity" EntityType="DotNetTestModel.Store.Activity" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Answer" EntityType="DotNetTestModel.Store.Answer" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Question" EntityType="DotNetTestModel.Store.Question" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Test" EntityType="DotNetTestModel.Store.Test" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="User" EntityType="DotNetTestModel.Store.User" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK__Activity__Organi__1FCDBCEB" Association="DotNetTestModel.Store.FK__Activity__Organi__1FCDBCEB">
+      <End Role="User" EntitySet="User" />
+      <End Role="Activity" EntitySet="Activity" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Activity__TestID__1DE57479" Association="DotNetTestModel.Store.FK__Activity__TestID__1DE57479">
+      <End Role="Test" EntitySet="Test" />
+      <End Role="Activity" EntitySet="Activity" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Activity__UserID__1ED998B2" Association="DotNetTestModel.Store.FK__Activity__UserID__1ED998B2">
+      <End Role="User" EntitySet="User" />
+      <End Role="Activity" EntitySet="Activity" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Answer__QuesID__22AA2996" Association="DotNetTestModel.Store.FK__Answer__QuesID__22AA2996">
+      <End Role="Question" EntitySet="Question" />
+      <End Role="Answer" EntitySet="Answer" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Answer__TestID__20C1E124" Association="DotNetTestModel.Store.FK__Answer__TestID__20C1E124">
+      <End Role="Test" EntitySet="Test" />
+      <End Role="Answer" EntitySet="Answer" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Answer__UserID__21B6055D" Association="DotNetTestModel.Store.FK__Answer__UserID__21B6055D">
+      <End Role="User" EntitySet="User" />
+      <End Role="Answer" EntitySet="Answer" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Question__TestID__1CF15040" Association="DotNetTestModel.Store.FK__Question__TestID__1CF15040">
+      <End Role="Test" EntitySet="Test" />
+      <End Role="Question" EntitySet="Question" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Test__Organiser__1BFD2C07" Association="DotNetTestModel.Store.FK__Test__Organiser__1BFD2C07">
+      <End Role="User" EntitySet="User" />
+      <End Role="Test" EntitySet="Test" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Activity">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="numeric" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Organiser" Type="numeric" />
+    <Property Name="TestID" Type="numeric" />
+    <Property Name="UserID" Type="numeric" />
+  </EntityType>
+  <EntityType Name="Answer">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="numeric" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="TestID" Type="numeric" />
+    <Property Name="UserID" Type="numeric" />
+    <Property Name="QuesID" Type="numeric" />
+    <Property Name="Ans" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="Question">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="numeric" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="TestID" Type="numeric" />
+    <Property Name="Ques" Type="varchar(max)" />
+    <Property Name="Ans" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="Test">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="numeric" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Title" Type="varchar" MaxLength="50" />
+    <Property Name="Organiser" Type="numeric" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="numeric" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="varchar" MaxLength="50" />
+    <Property Name="Email" Type="varchar" MaxLength="50" />
+    <Property Name="Password" Type="varchar" MaxLength="50" />
+    <Property Name="Mobile" Type="varchar" MaxLength="50" />
+    <Property Name="Role" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <Association Name="FK__Activity__Organi__1FCDBCEB">
+    <End Role="User" Type="DotNetTestModel.Store.User" Multiplicity="0..1" />
+    <End Role="Activity" Type="DotNetTestModel.Store.Activity" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Activity">
+        <PropertyRef Name="Organiser" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Activity__TestID__1DE57479">
+    <End Role="Test" Type="DotNetTestModel.Store.Test" Multiplicity="0..1" />
+    <End Role="Activity" Type="DotNetTestModel.Store.Activity" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Test">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Activity">
+        <PropertyRef Name="TestID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Activity__UserID__1ED998B2">
+    <End Role="User" Type="DotNetTestModel.Store.User" Multiplicity="0..1" />
+    <End Role="Activity" Type="DotNetTestModel.Store.Activity" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Activity">
+        <PropertyRef Name="UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Answer__QuesID__22AA2996">
+    <End Role="Question" Type="DotNetTestModel.Store.Question" Multiplicity="0..1" />
+    <End Role="Answer" Type="DotNetTestModel.Store.Answer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Question">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Answer">
+        <PropertyRef Name="QuesID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Answer__TestID__20C1E124">
+    <End Role="Test" Type="DotNetTestModel.Store.Test" Multiplicity="0..1" />
+    <End Role="Answer" Type="DotNetTestModel.Store.Answer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Test">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Answer">
+        <PropertyRef Name="TestID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Answer__UserID__21B6055D">
+    <End Role="User" Type="DotNetTestModel.Store.User" Multiplicity="0..1" />
+    <End Role="Answer" Type="DotNetTestModel.Store.Answer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Answer">
+        <PropertyRef Name="UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Question__TestID__1CF15040">
+    <End Role="Test" Type="DotNetTestModel.Store.Test" Multiplicity="0..1" />
+    <End Role="Question" Type="DotNetTestModel.Store.Question" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Test">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Question">
+        <PropertyRef Name="TestID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Test__Organiser__1BFD2C07">
+    <End Role="User" Type="DotNetTestModel.Store.User" Multiplicity="0..1" />
+    <End Role="Test" Type="DotNetTestModel.Store.Test" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Test">
+        <PropertyRef Name="Organiser" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

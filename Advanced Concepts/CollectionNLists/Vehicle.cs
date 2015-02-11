@@ -1,13 +1,15 @@
 ﻿using System;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CollectionNLists
 {
+    /// <summary>
+    /// Class to hold vehicle details
+    /// </summary>
     class Vehicle : IComparable
     {
-        // private attributes for Vehicle class
+        /// <summary>
+        /// Private attributes
+        /// </summary>
         #region Attributes
         private string make;
         private int yearOfManufacture;
@@ -15,7 +17,9 @@ namespace CollectionNLists
         private float maxSpeed;
         #endregion
 
-        //public properties for private attributes
+        /// <summary>
+        /// Public properties for private members
+        /// </summary>
         #region PublicProperties
         public string Make
         {
@@ -39,6 +43,13 @@ namespace CollectionNLists
         }
         #endregion
 
+        /// <summary>
+        /// Parametric constructor for Vehicl class
+        /// </summary>
+        /// <param name="make">MAke of the vehicle</param>
+        /// <param name="yearOfManufacture"> Year of manufacturing for the vehicle</param>
+        /// <param name="model">Model of the vehicle</param>
+        /// <param name="maxSpeed">Maximum Speed of the vehicle</param>
         public Vehicle(string make, int yearOfManufacture, string model, float maxSpeed)
         {
             this.make = make;
@@ -46,7 +57,10 @@ namespace CollectionNLists
             this.model = model;
             this.maxSpeed = maxSpeed;
         }
-        //method to display details of Vehicle
+
+        /// <summary>
+        /// Method to display the vehicle
+        /// </summary>
         public void ShowDetails()
         {
             Console.WriteLine("\nDetails about the Vehicle : \n");
@@ -56,7 +70,11 @@ namespace CollectionNLists
             Console.WriteLine("Maximum Speed : {0} ", this.maxSpeed);
         }
 
-        //method to compare two objects of Vehicle class
+        /// <summary>
+        /// Overridden ComapreTo method
+        /// </summary>
+        /// <param name="obj">Object to be compared</param>
+        /// <returns>Result of comparison</returns>
         int IComparable.CompareTo(object obj)
         {
             Vehicle other = (Vehicle)obj;
@@ -71,17 +89,26 @@ namespace CollectionNLists
             ///return this.maxSpeed.CompareTo(other.maxSpeed);
         }
 
-        //overridden ToString()
+        /// <summary>
+        /// Overriden ToString() method
+        /// </summary>
+        /// <returns>String to be printed</returns>
         public override string ToString()
         {
             return this.make.ToString() + " , " + this.model.ToString() + " , " + this.maxSpeed.ToString();
         }
 
-        //overridden Equals()
+        /// <summary>
+        /// Overridden Equals method to compare two objects
+        /// </summary>
+        /// <param name="obj">Object to be compared with</param>
+        /// <returns>Result of the comparison</returns>
         public override bool Equals(Object obj)
         {
+            //Type cast the object
             Vehicle vehicleObj = (Vehicle)obj;
             bool result;
+            //Compare the objects and return result
             if (obj == null)
             {
                 return false;
@@ -90,7 +117,6 @@ namespace CollectionNLists
 
             return result;
         }
-
 
     }
 }
